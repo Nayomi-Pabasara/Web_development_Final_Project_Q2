@@ -1,0 +1,46 @@
+DB Name : institute
+
+Table Name : students 
+
+Table column  name : studentid / studentname / city / courseid
+
+
+Table Name : courses 
+
+Table column  name : courseid / coursename / lecturername
+
+
+A) SELECT * FROM institute.students;
+
+
+studentid     studentname            city         courseid
+1             Kasun Gamage           Kandy        2
+2             Daniel Sam             Jafna        3
+3             Hansi Silva            Colombo      1
+4             Ranidu heath           Matara       3
+5             Praneeth Wijesinghe    Kandy        4
+6             Nuwani Herath          Rathnapura   1
+
+
+
+B) SELECT studentid,studentname,city FROM institute.students WHERE city='Kandy';
+
+studentid   studentname          city
+1           Kasun Gamage         Kandy
+5           Praneeth Wijesinghe  Kandy
+
+
+C) UPDATE institute.students SET city='Galle' WHERE studentid='4';
+
+studentid  city
+4          Galle                   
+
+D)SELECT * FROM institute.students s INNER JOIN institute.courses c ON s.courseid = c.courseid ;
+
+studentid     studentname            city         courseid    coursename
+1             Kasun Gamage           Kandy        2           Graphic Design
+2             Daniel Sam             Jafna        3           Mobile App Development
+3             Hansi Silva            Colombo      1           Web Development
+4             Ranidu heath           Matara       3           Mobile App Development 
+5             Praneeth Wijesinghe    Kandy        4           Java
+6             Nuwani Herath          Rathnapura   1           Web Development
